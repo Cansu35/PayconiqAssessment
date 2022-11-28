@@ -26,7 +26,9 @@ public class BookingTest extends HerOkuAppBaseUrl {
     BookingIds actualPojo;
 
     @Test(priority = 1)
+
     public void testCreateBooking() {
+
         herOku.pathParam("first", "booking");
 
         bookingdates = new Bookingdates("2021-06-01", "2021-07-01");
@@ -44,6 +46,7 @@ public class BookingTest extends HerOkuAppBaseUrl {
         assertEquals(booking.getBookingdates().getCheckin(), actualPojo.getBooking().getBookingdates().getCheckin());
         assertEquals(booking.getBookingdates().getCheckout(), actualPojo.getBooking().getBookingdates().getCheckout());
         assertEquals(booking.getAdditionalneeds(), actualPojo.getBooking().getAdditionalneeds());
+
 
     }
 
@@ -65,6 +68,8 @@ public class BookingTest extends HerOkuAppBaseUrl {
         assertEquals(bookingdates.getCheckin(), actualPojo.getBookingdates().getCheckin());
         assertEquals(bookingdates.getCheckout(), actualPojo.getBookingdates().getCheckout());
         assertEquals(booking.getAdditionalneeds(), actualPojo.getAdditionalneeds());
+
+
 
    }
 
